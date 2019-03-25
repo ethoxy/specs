@@ -1,0 +1,32 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <link href="{{ site.url }}/atom.xml" rel="self" />
+  <link href="{{ site.url }}/"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}</id>
+  <author>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
+  </author>
+  {% assign pages = site.toc_pages | sort_by_date: 'updated_at' %}
+  {% for page in pages %}
+  {% unless page.no_rss %}
+  {% if page.toc_index %}
+  {% if page.updated_at %}
+    <entry>
+      <title>{{ page.title }}</title>
+      <link href="{{ site.url }}{{ post.url }}" />
+      <updated>{{ page.updated_at | date_to_xmlschema }}</updated>
+      <id>{{ site.url }}{{ page.url }}</id>
+      <content type="html">{{ page.content | markdownify | xml_escape }}</content>
+    </entry>
+  {% endif %}
+  {% endif %}
+  {% endunless %}
+  {% endfor %}
+</feed>

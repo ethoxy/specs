@@ -1,0 +1,6 @@
+[submodule "_common"]
+	path = common
+	url = public@git.that.world:multiverse/common.git
+[submodule "common"]
+	path = common
+	url = https://github.com/ethoxy/stylesheets

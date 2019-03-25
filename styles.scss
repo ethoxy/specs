@@ -1,0 +1,53 @@
+---
+---
+
+// Copyright (c) 2015-2019 Wei Tang.
+
+// This program is free software: you can redistribute it and/or
+// modify it under the terms of the GNU General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+
+// This program is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see
+// <https://www.gnu.org/licenses/>.
+
+// Based on the Poole project, developed by @mdo, under MIT license.
+
+@import url("common/fonts/rosario/stylesheet.css");
+@import url("common/fonts/ubuntu-mono/stylesheet.css");
+
+$font-family-sans-serif: "Rosario", Arial, sans-serif;
+$font-family-serif:     Georgia, serif;
+$font-family-base:      $font-family-sans-serif;
+$font-family-mono:       "Ubuntu Mono", Menlo, Monaco, "Courier New", monospace;
+
+@import "default";
+@import "org";
+
+.content {
+  max-width: 43em;
+}
+
+.small-column {
+  -webkit-column-width: 19em; /* Chrome, Safari, Opera */
+  -moz-column-width: 19em; /* Firefox */
+  column-width: 19em;
+
+  -webkit-column-gap: 1.7em; /* Chrome, Safari, Opera */
+  -moz-column-gap: 1.7em; /* Firefox */
+  column-gap: 1.7em;
+}
+
+.footer {
+  margin-top: 2rem;
+}
+
+.wrap {
+  background-image: url('./images/background.png');
+}
