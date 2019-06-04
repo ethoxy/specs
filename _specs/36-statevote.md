@@ -33,7 +33,7 @@ When using this method to implement miner signaling, we can just ask miners to i
 * The signaling contract checks that the execution frame is top-level, by making sure `ORIGIN` is `CALLER`.
 * The signaling contract then counts the block's hash power as voted, and it notes the current block number to avoid double vote.
 
-Below is an example contract that counts signaling based on last 50000 blocks, and enable the hard fork when 80% of blocks signals to be ready, with a lock-in period of another 5000 blocks.
+Below is an example contract that counts signaling based on last 50000 blocks, and enable the hard fork when 80% of blocks signals to be ready, with a lock-in period of another 50000 blocks.
 
 ```
 pragma solidity ^0.5.9;
