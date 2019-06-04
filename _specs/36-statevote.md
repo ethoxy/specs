@@ -56,12 +56,12 @@ contract HardFork {
         
         uint _current = lastVoted;
         while (_current < block.number) {
+            _current += 1;
             if (_current == block.number) {
                 votes.push(true);
             } else {
                 votes.push(false);
             }
-            _current += 1;
         }
         
         uint _votedCount = 0;
