@@ -16,7 +16,7 @@ This ECIP defines a hard fork procedure where rather than hard coding a block nu
 
 ## Specification
 
-When defining hard fork meta ECIPs, rather than associate the hard fork with a block number, associate it with a contract address `HARD_FORK_CONTRACT` and a storage location `HARD_FORK_STORAGE`. Before processing a new block, check whether `HARD_FORK_STORAGE` in `HARD_FORK_CONTRACT` is not 0 and if current block number is greater or equal than the storage value. If so, enable the feature set defined by the hard fork meta ECIP.
+When defining hard fork meta ECIPs, rather than associate the hard fork with a block number, associate it with a contract address `HARD_FORK_CONTRACT` and a storage location `HARD_FORK_STORAGE`. Before processing a new block, check whether `HARD_FORK_STORAGE` in `HARD_FORK_CONTRACT` is not 0 and if current block number is greater than or equal to the storage value. If so, enable the feature set defined by the hard fork meta ECIP.
 
 ## Rationale
 
